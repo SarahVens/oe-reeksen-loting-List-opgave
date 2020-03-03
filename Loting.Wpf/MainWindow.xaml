@@ -5,15 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Loting.Wpf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="383.886" Width="723.223">
+        Title="MainWindow" Height="383.886" Width="723.223" Loaded="Window_Loaded">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="218*"/>
+            <ColumnDefinition Width="497*"/>
+        </Grid.ColumnDefinitions>
         <ListBox x:Name="lstBeschikbaar" HorizontalAlignment="Left" Height="236" Margin="26,50,0,0" VerticalAlignment="Top" Width="150" IsEnabled="False"/>
-        <ListBox x:Name="lstGekozen" HorizontalAlignment="Left" Height="236" Margin="200,50,0,0" VerticalAlignment="Top" Width="150" IsEnabled="False"/>
-        <ListBox x:Name="lstMatchen" HorizontalAlignment="Left" Height="236" Margin="382,50,0,0" VerticalAlignment="Top" Width="318" IsEnabled="False"/>
-        <Button x:Name="btnLoot" Content="Loot" HorizontalAlignment="Left" Margin="26,302,0,0" VerticalAlignment="Top" Width="75" />
+        <ListBox x:Name="lstGekozen" HorizontalAlignment="Left" Height="236" Margin="200,50,0,0" VerticalAlignment="Top" Width="150" IsEnabled="False" Grid.ColumnSpan="2"/>
+        <ListBox x:Name="lstMatchen" HorizontalAlignment="Left" Height="236" Margin="164,50,0,0" VerticalAlignment="Top" Width="318" IsEnabled="False" Grid.Column="1"/>
+        <Button x:Name="btnLoot" Content="Loot" HorizontalAlignment="Left" Margin="26,302,0,0" VerticalAlignment="Top" Width="75" Click="btnLoot_Click" />
         <Label Content="In de trommel" HorizontalAlignment="Left" Margin="26,10,0,0" VerticalAlignment="Top" Width="150"/>
-        <Label Content="Uit de trommel" HorizontalAlignment="Left" Margin="200,10,0,0" VerticalAlignment="Top" Width="150"/>
-        <Label Content="Wedstrijden" HorizontalAlignment="Left" Margin="382,10,0,0" VerticalAlignment="Top" Width="318"/>
+        <Label Content="Uit de trommel" HorizontalAlignment="Left" Margin="200,10,0,0" VerticalAlignment="Top" Width="150" Grid.ColumnSpan="2"/>
+        <Label Content="Wedstrijden" HorizontalAlignment="Left" Margin="164,10,0,0" VerticalAlignment="Top" Width="318" Grid.Column="1"/>
 
     </Grid>
 </Window>
